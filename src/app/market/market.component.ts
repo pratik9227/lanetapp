@@ -41,6 +41,8 @@ export class MarketComponent implements OnInit {
   // todate :any;
   curlist: any;
   curlist2: any;
+  date: any;
+  enddate: any;
   orders: Order = {
     ctype: '',
     ctime: '',
