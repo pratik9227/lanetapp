@@ -35,6 +35,7 @@ export class DashboardComponent implements OnInit {
   // date = new Date();  
   // todate :any;
   date: any;
+  enddate: any;
   curlist: any;
   curlist2: any;
   orders: Order = {
