@@ -34,6 +34,7 @@ export class DashboardComponent implements OnInit {
   public chartBarOptions: Partial<ChartOptions>;
   // date = new Date();  
   // todate :any;
+  date: any;
   curlist: any;
   curlist2: any;
   orders: Order = {
@@ -58,6 +59,7 @@ export class DashboardComponent implements OnInit {
     this.chartCandleOptions = {
       series: [
         {
+
           name: "candle",
           data: this.chartSeries
         }
