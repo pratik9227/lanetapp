@@ -72,7 +72,7 @@
                                     [chart]="chartCandleOptions.chart" [xaxis]="chartCandleOptions.xaxis"
                                     [plotOptions]="chartCandleOptions.plotOptions"></apx-chart>
                             </div>
-                            <div id="chart-bar">
+                            <div id="chart-bar" *ngIf = 'enable'>
                                 <apx-chart #chartBar [series]="chartBarOptions.series" [chart]="chartBarOptions.chart"
                                     [xaxis]="chartBarOptions.xaxis" [yaxis]="chartBarOptions.yaxis"
                                     [dataLabels]="chartBarOptions.dataLabels" [stroke]="chartBarOptions.stroke"

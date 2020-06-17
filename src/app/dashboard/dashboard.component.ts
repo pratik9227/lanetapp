@@ -46,11 +46,13 @@ export class DashboardComponent implements OnInit {
   }
   chartSeries: any = [];
   seriesDataLinear: any = [];
+  enable: boolean;
 
   constructor(private cookie: CookieService,
     private dataservice: DataService,
     public router: Router) {
 
+      this.enable = false;
     this.uname = this.cookie.get('uname');
     this.uemail = this.cookie.get('uemail');
     this.uid = this.cookie.get('upic');
@@ -222,6 +224,7 @@ export class DashboardComponent implements OnInit {
         //   data: this.seriesDataLinear
         // }];
         console.log("Setting timeout off")
+        this.enable = true;
       });
     });
   }
