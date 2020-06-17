@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('../src/assets/css/bootstrap.min.css');
+@import url('../src/assets/css/style.css');
+@import url('../src/assets/css/responsive.css');
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+.my-profile {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.my-profile:hover {
+    text-decoration: none;
+    /* background-color: #f8f9fa; */
+    color: #07a521 !important;
+}
+
+#p-username:hover {
+    background-color: #f8f9fa;
+}
+
+#p-username:hover .my-profile {
+    color: #07a521 !important;
+}
+.dp-image {
+    width: 100%;
+    MAX-WIDTH: 50PX;
+    HEIGHT: 50PX;
+    BORDER-RADIUS: 50%;
+}

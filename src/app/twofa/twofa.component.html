@@ -1,0 +1,95 @@
+
+<!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark menubg-custom">
+    <div class="container">
+        <a class="navbar-brand" routerLinkActive='active' [routerLink]="['/home']"><img src="../assets/image/logo.png" class="img-fluid logo" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
+            <!-- <ul class="navbar-nav ml-auto custom-menu">
+
+                <li class="nav-item" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/twofa']">2fa</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">feed</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">blog</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">contact</a>
+                </li>
+                <li class="nav-item"   >
+                    <a class="nav-link" href="#">demo</a>
+                </li>
+                <li class="nav-item logontab" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/login']">log in</a>
+                </li>
+            </ul> -->
+        <!-- </div>
+    </div>
+</nav> -->
+
+<div class="container" *ngIf = '!asd' >
+    <div class='row'>
+
+    <div class="col-md-4 mx-auto">
+      <div class="card my-5 shadow" >
+       <div class="card-body">
+    <h4> Set up TFA </h4>
+    <p> Scan the code from the app </p>
+    <p class="text-center" >
+    <ngx-qrcode  [elementType]="elementType"    [value] = "value" ></ngx-qrcode>
+    </p>
+    <!-- <p class="text-center">
+     <img src='otpauth://totp/lanetbit:lewis@gmail.com?issuer=lanetbit&secret=HF2DGWTGM4%3D%3D%3D%3D%3D%3D' class="" alt=""> 
+    <ngx-qrcode qrc-element-type="elementType" qrc-value = "value">
+    </ngx-qrcode>
+    
+    </p> -->
+
+<p> Enter the otp from the app </p>
+<form>
+ <input type="text" name='otp' [(ngModel)]='otp2.token' class="form-control mb-3" >
+
+ <input type="submit" class="form-control btn btn-primary   " (click)='sub()' value="Submit " >
+</form>
+       </div>
+      </div>
+    </div>
+
+ </div>
+</div>
+
+
+<div class="container" *ngIf = 'asd' >
+    <div class='row'>
+
+    <div class="col-md-4 mx-auto">
+      <div class="card my-5 shadow" >
+       <div class="card-body">
+    <h4> Google TFA </h4>
+    <!-- <p>lorem ipsum dolr sit amet </p> -->
+    <p class="text-center" >
+    <ngx-qrcode  [elementType]="elementType"    [value] = "value" ></ngx-qrcode>
+    </p>
+    <!-- <p class="text-center">
+     <img src='otpauth://totp/lanetbit:lewis@gmail.com?issuer=lanetbit&secret=HF2DGWTGM4%3D%3D%3D%3D%3D%3D' class="" alt=""> 
+    <ngx-qrcode qrc-element-type="elementType" qrc-value = "value">
+    </ngx-qrcode>
+    
+    </p> -->
+
+<p> Enter the otp from the app </p>
+<form>
+ <input type="text" name='otp' [(ngModel)]='otp2.token' class="form-control mb-3" >
+
+ <input type="submit" class="form-control btn btn-primary   " (click)='sub2()' value="Submit " >
+</form>
+       </div>
+      </div>
+    </div>
+
+ </div>
+</div>

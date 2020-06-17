@@ -1,0 +1,145 @@
+<section class="mainpage-bg">
+    <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark menubg-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="../assets/image/logo.png" class="img-fluid logo"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto custom-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive='active' [routerLink]="['/home']">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Market</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Wallet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                            data-toggle="dropdown">my Account</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="d-flex justify-content-center align-itmes-center dp px-2">
+                                <div><img src="../assets/image/user-img.png" alt=""> </div>
+                                <div>
+                                    <p class="text-white pb-0 mb-0">
+                                        <button class="btn btn-link my-profile" (click)="goToViewProfile('profile')">
+                                            Mariaa Doe</button>
+                                    </p>
+                                    <span class="text-white">maria@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><img src="../assets/image/history.svg" alt="">
+                                Buy/Sell</a>
+                            <a class="dropdown-item" href="#"><img src="../assets/image/user (2).svg" alt="">
+                                Refferal</a>
+                            <a class="dropdown-item" href="#"><img src="../assets/image/gear (1).svg" alt="">
+                                Settings</a>
+                            <a class="dropdown-item" href="security.html"><img src="../assets/image/target.svg" alt="">
+                                Security</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><img src="../assets/image/log-out.svg" alt=""> Log Out</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card my-5">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div><img src="../assets/image/wallet.png" alt=""></div>
+                            <div class="ml-3">
+                                <h3 class="mb-0 font-weight-bold color-blue">$ 123</h3>
+                                <p class="color-blue">Your wallet balance</p>
+                            </div>
+                            <div class="ml-auto">
+                                <ul class="list-unstyled wallet-list">
+                                    <li><a href="#">Buy/sell</a></li>
+                                    <li><a href="#">withdraw</a></li>
+                                    <li><a href="#">Deposit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <select [(ngModel)]="orders.ctype" name="st" class="form-control col-md-2 mr-2  ">
+                <option *ngFor="let lii of curlist | keyvalue" [ngValue]="lii.key">{{lii.key}}</option>
+            </select>
+
+            <select [(ngModel)]="orders.ctime" name="st1" class="form-control col-md-1 mr-2  ">
+                <option value='1d'>1d</option>
+                <option value='1h'>1h</option>
+                <option value='1m'>1m</option>
+            </select>
+
+            <ul class="list-unstyled chart-date mr-2">
+                <li>From</li>
+                <!-- <li class="date-bg"><input type="text" bsDatepicker> </li> -->
+                <li class="date-bg">
+                    <!-- <input type="text" id="startDate" [(ngModel)]="startDate" class="datepicker"> -->
+                    <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="date">
+                        <mat-datepicker [startAt]="date" #picker></mat-datepicker>
+                    </mat-form-field>
+                    <button mat-raised-button (click)="picker.open()"><i class="fa fa-calendar"></i></button>
+                </li>
+                <li>To</li>
+                <li class="date-bg">
+                    <!-- <input type="text" id="startDate" [(ngModel)]="startDate" class="datepicker"> -->
+                    <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="pickerto" [(ngModel)]="enddate">
+                        <mat-datepicker [startAt]="enddate" #pickerto></mat-datepicker>
+                    </mat-form-field>
+                    <button mat-raised-button (click)="pickerto.open()"><i class="fa fa-calendar"></i></button>
+                </li>
+                <!-- <li class="date-bg">
+                    <input type="text" id="endDate" class="datepicker" [(ngModel)]="endDate">
+                </li> -->
+            </ul>
+            <!-- <button type="submit" (click)='ChartData()' class="btn btn-success btn-sm">SUBMIT</button> -->
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <div class="chart-box">
+                        <div id="chart-candlestick">
+                            <apx-chart #chartCandle [series]="chartCandleOptions.series"
+                                [chart]="chartCandleOptions.chart" [xaxis]="chartCandleOptions.xaxis"
+                                [plotOptions]="chartCandleOptions.plotOptions"></apx-chart>
+                        </div>
+                        <div id="chart-bar">
+                            <apx-chart #chartBar [series]="chartBarOptions.series" [chart]="chartBarOptions.chart"
+                                [xaxis]="chartBarOptions.xaxis" [yaxis]="chartBarOptions.yaxis"
+                                [dataLabels]="chartBarOptions.dataLabels" [stroke]="chartBarOptions.stroke"
+                                [plotOptions]="chartBarOptions.plotOptions"></apx-chart>
+                        </div>
+                    </div>
+                </div>
+                <!-- <pre>{{chartBarOptions.series | json}}</pre> -->
+            </div>
+        </div>
+        <br>
+    </div>
+</section>

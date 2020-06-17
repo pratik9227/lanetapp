@@ -1,0 +1,120 @@
+
+<body>
+  <section class="mainpage-bg">
+
+<!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark menubg-custom">
+    <div class="container">
+        <a class="navbar-brand" routerLinkActive='active' [routerLink]="['/home']"><img src="../assets/image/logo.png" class="img-fluid logo" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto custom-menu">
+
+                <li class="nav-item" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/twofa']">2fa</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">feed</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">blog</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#">contact</a>
+                </li>
+                <li class="nav-item"   >
+                    <a class="nav-link" href="#">demo</a>
+                </li>
+                <li class="nav-item logontab" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/login']">log in</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+      <div class="container banner-sec login-sec login-sec2">
+              <div class="row">
+              <div class="col-md-9 mx-auto">
+                 <div class="login-bg">
+                      <div class="inner-login loginarea360">
+                           <h3 class="text-uppercase text-center pb-3">Create a free account </h3>
+                           <form #form='ngForm' ngNativeValidate>
+
+                            <p class="">
+                              <select required class="form-control custom-input" placeholder='country' name="country" [(ngModel)]='nusers.country'>
+                              <option required *ngFor="let cwl of countrylist" >{{cwl.name}} </option>
+                              </select>
+                            </p>
+                               <!-- <p class="mb-4"><input required type="text" class="form-control custom-input" name="coun" [(ngModel)]='nusers.country' placeholder="Country"></p> -->
+                               <p class="mb-4"><input required type="text" class="form-control custom-input" name="name" [(ngModel)]='nusers.fullname' placeholder="Full name"></p>
+                               <p class="mb-4"><input required type="email" class="form-control custom-input" name="email" [(ngModel)]='nusers.email' placeholder="Email"></p>
+                               <p class="mb-4"><input required type="Password" class="form-control custom-input" name="password" [(ngModel)]='nusers.password' placeholder="Password"></p>
+                               <p class="mb-4"><input required type="text" maxlength="10" class="form-control custom-input" name="phone" [(ngModel)]='nusers.phone' maxlength="10" placeholder="Mobile number"></p>
+                               <p class="mb-4"><input required type="hidden" class="form-control custom-input" name="role" [(ngModel)]='nusers.role' placeholder="Role"></p>
+                               <!-- <p class="mb-4"><input required type="text" class="form-control custom-input" name="gender" [(ngModel)]='nusers.gender' placeholder="Gender"></p> -->
+                      <!-- <div class='form-group'>
+                        <label> Gender </label>
+                        <div class='form-control'>
+                        <label class="radio-inline">
+                          <input type="radio" value="Male" name='gender' [(ngModel)]='nusers.gender'>
+                          Male
+                         </label>
+                        
+                         <label class="radio-inline">
+                          <input type="radio" value="Female" name='gender' [(ngModel)]='nusers.gender'>
+                           Female
+                         </label>
+                        </div>
+                      </div>           -->
+    <!-- <div class="mb-4">
+  
+       <label for=""><strong>Gender</strong> </label> <br>
+     
+         <div class="custom-control custom-radio custom-control-inline">
+      <input required type="radio" value="M" id='mal' name="gender" [(ngModel)]='nusers.gender' class="custom-control-input">
+      <label class="custom-control-label" for="mal">Male</label>
+    
+  </div>
+     
+      <div class="custom-control custom-radio custom-control-inline">
+          <input required type="radio" value='F' id='fmal' name="gender" [(ngModel)]='nusers.gender' class="custom-control-input">
+          <label class="custom-control-label" for="fmal">Female</label>
+        </div>
+      -->
+    
+ 
+      <!-- </div> -->
+
+
+                              <p class="mb-4"><div class="custom-control custom-checkbox">
+                                <input required type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label  class="custom-control-label" for="customCheck1">I am over age 18 , and I agree to <a href="#" class="color-green font-weight-bold"> LanetBit’s Terms </a></label>
+                              </div>
+
+                              <p class="mb-4"><input type="submit" (click)='regu()' value="Create account" class="form-control submit-btn"></p>
+                              <p class="text-center">Already registered? <a href="login.html" class="color-green" routerLinkActive='active' [routerLink]="['/login']" >Log in</a></p>
+                              </form>
+                      </div>
+                 </div>
+                  
+              </div>
+              <div class="clearfix"></div>
+              
+          </div>
+
+          <div class="row">
+              <div class="col-md-12">
+                   <p class="text-center text-white pt-4">© 2020 LanetBit.com. All rights reserved</p>
+              </div>
+          </div>
+      </div>
+
+
+
+  </section>
+
+
+</body>
+

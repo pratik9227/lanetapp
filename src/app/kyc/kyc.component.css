@@ -1,0 +1,32 @@
+.kyc {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.kyc:hover {
+    text-decoration: underline;
+}
+
+input {
+    padding:5px;
+      font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+  }
+  .bg-blue{  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); border: none;
+    border-radius: 10px; background: #20283C; color: #fff;
+}
+
+select {
+    font-family: 'FontAwesome', "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+    word-wrap: normal;
+    
+  }
+  option{
+      padding: 10px;
+  }

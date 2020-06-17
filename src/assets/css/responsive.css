@@ -1,0 +1,32 @@
+@media (max-width: 1199px){
+	 .crpto-section{ padding: 20px 0; }
+}
+@media (max-width: 991px){
+	.banner-heading{ font-size: 25px; }
+	.banner-content{ font-size: 17px; }
+	.banner-playatore img{ max-width: 95px }
+	.banner-playatore li{ margin: 5px }
+	.title-headind{ font-size: 30px }
+	.trust p, .trust-blog p{ max-width: 100% }
+    .busines-conman {margin: auto 0;}
+    .currency-list li{ width: 23%; }
+}
+@media (max-width: 767px){
+	.logo{ max-width: 150px }
+	.custom-menu li a{ margin: 5px 0px;}
+	.custom-menu li:last-child a{padding: 0px .3rem 0 1rem !important;}
+	.banner-sec{ padding: 15px }
+	.banner-playatore{ margin-left: auto; }	
+	.trust-blog{ margin-bottom: 30px; }	
+	.crpto-section{ padding: 30px; }
+	.main-peraggraph{ font-size: 18px; }
+	 .currency-list li{ width: 35%; }
+   .ftplay-store li{ margin: 5px;  }
+   .ftplay-store li img{ max-width: 100px; }
+   .login-sec{ padding: 15px; }
+   .login-bg{ padding: 30px; margin:15px; }
+}
+@media (max-width: 574px){
+	.currency-list li{ width: 92%; }
+	.currency-list li p, .pera{ font-size: 14px; }
+}

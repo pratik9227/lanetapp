@@ -1,0 +1,78 @@
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark menubg-custom" *ngIf='asd'>
+    <div class="container">
+        <a class="navbar-brand" routerLinkActive='active' [routerLink]="['/home']"><img src="../assets/image/logo.png" class="img-fluid logo"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto custom-menu">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/dashboard']">dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/about']">about</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void()" id="navbarDropdown"
+                        role="button" data-toggle="dropdown">my Account</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="d-flex justify-content-center align-itmes-center dp px-2">
+                            <div><img src={{uid}} class="dp-image"> </div>
+                            <div>
+                                <p class="text-white pb-0 mb-0" id="p-username">
+                                    <button class="btn btn-link my-profile"
+                                        (click)="goToViewProfile('profile')"> {{uname}}</button>
+                                </p>
+                                <span class="text-white">{{uemail}}</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLinkActive='active' [routerLink]="['/kyc']"><img
+                                src="../assets/image/user (2).svg" alt=""> Kyc</a>
+                        <a class="dropdown-item" routerLinkActive='active' [routerLink]="['/updateuser']"><img
+                                src="../assets/image/gear (1).svg" alt=""> Settings</a>
+                        <a class="dropdown-item" routerLinkActive='active'
+                            [routerLink]="['/accountsecurity']"><img src="../assets/image/target.svg" alt="">
+                            Security</a>
+                        <a class="dropdown-item" routerLinkActive='active'
+                            [routerLink]="['/bankdetails']"><img src="../assets/image/target.svg" alt="">
+                            Bank details</a>
+                        <a class="dropdown-item" routerLinkActive='active'
+                            [routerLink]="['/changepassword']"><img src="../assets/image/target.svg" alt="">
+                            Change password</a>
+                        <a class="dropdown-item" routerLinkActive='active'
+                            [routerLink]="['/crypto-to-crypto']"><img src="../assets/image/target.svg" alt="">
+                            Crypto to Crypto</a>                                                                                                            
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" (click)='logout()'><img
+                                src="../assets/image/log-out.svg" alt=""> Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark menubg-custom" *ngIf='!asd' >
+    <div class="container">
+        <a class="navbar-brand" routerLinkActive='active' [routerLink]="['/home']"><img src="../assets/image/logo.png" class="img-fluid logo" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto custom-menu">
+                <li class="nav-item" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/about']">about</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/contact']">contact</a>
+                </li>
+                <li class="nav-item logontab" >
+                    <a class="nav-link" routerLinkActive='active' [routerLink]="['/login']">log in</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> 
