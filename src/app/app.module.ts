@@ -48,7 +48,8 @@ import { CryptoCryptoComponent } from './crypto-crypto/crypto-crypto.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {AuthGuardService} from './authService/auth.component'
+import {AuthGuardService} from './authService/auth.component';
+import { CryptolistComponent } from './cryptolist/cryptolist.component'
 
 
 
@@ -97,7 +98,8 @@ export function provideConfig() {
     CryptoCryptoComponent,
     ChangepasswordComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CryptolistComponent
   ],
   imports: [
     BrowserModule,

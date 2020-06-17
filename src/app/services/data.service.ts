@@ -107,6 +107,23 @@ export class DataService {
     return this.http.get(AppURL + 'exchange/crypto-to-crypto/currencies', httpOptions);
   }
 
+    cryptolist(): Observable<any> {
+
+     this.t = this.cookie.get('utoken');
+    console.log(this.t);
+
+    this.headers_object = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.t}`
+    });
+    const httpOptions = {
+      headers: this.headers_object
+    };
+
+    return this.http.get(AppURL + 'exchange/crypto-to-crypto/tx', httpOptions);
+  }
+
+
 
   userdetail(): Observable<any> {
 

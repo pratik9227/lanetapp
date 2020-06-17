@@ -19,7 +19,9 @@ import { TermsandconditionComponent } from './termsandcondition/termsandconditio
 import { BankdetailsComponent } from './bankdetails/bankdetails.component';
 import { CryptoCryptoComponent } from './crypto-crypto/crypto-crypto.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
-import {AuthGuardService} from './authService/auth.component'
+import {AuthGuardService} from './authService/auth.component';
+import { CryptolistComponent } from './cryptolist/cryptolist.component'
+
 
 
 
@@ -45,7 +47,9 @@ const routes: Routes = [
   {path: 'bankdetails', component: BankdetailsComponent, canActivate:[AuthGuardService]},
   {path: 'crypto-to-crypto', component: CryptoCryptoComponent, canActivate:[AuthGuardService]},
   {path: 'changepassword', component: ChangepasswordComponent, canActivate:[AuthGuardService]},
-  
+  {path: 'cryptolist', component: CryptolistComponent, canActivate:[AuthGuardService]}
+
+
 ];
 
 @NgModule({
