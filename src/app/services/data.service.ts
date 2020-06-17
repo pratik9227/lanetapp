@@ -227,7 +227,7 @@ export class DataService {
       headers: this.headers_object
     };
    
-    return this.http.get(AppURL + 'exchange/instruments/btc_usd/history?startDate=2020-02-29T03%3A22%3A59&endDate=2020-05-05T09%3A23%3A59&type=1d&count=100', httpOptions);
+    return this.http.get(AppURL + 'exchange/instruments/btc_usd/history?startDate=2020-05-29T03%3A22%3A59&endDate=2020-06-05T09%3A23%3A59&type=1m&count=100', httpOptions);
   }
 
   kyc(image: File, payloadDetails: string): Observable<any> {
